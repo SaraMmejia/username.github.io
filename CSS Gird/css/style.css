@@ -1,0 +1,70 @@
+html {
+    font-family: 'Shadows Into Light';
+    color:black; 
+    font-weight: 500;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    margin: 30px;
+    display: grid;
+    grid-gap: 30px; 
+    grid-template: "a a" minmax(150px, auto)
+                   "a a" minmax(150px, auto)
+                   "b c" minmax(auto,150px)
+                   "d e" minmax(auto, 150px)
+                   "f g" minmax(auto, 150px)
+                   "h i" minmax(auto, 150px)
+                   "j ." minmax(auto, 150px);
+}
+
+@media screen and (min-width:768px){
+    .container{
+        grid-template: "a a b" minmax(150px, auto)
+                       "a a c" minmax(150px, auto)
+                       "d e f" minmax(auto, 150px)
+                       "g h i" minmax(auto, 150px)
+                       "j . ." minmax(auto,150px);
+                    
+    }
+}
+
+@media screen and (min-width:991px){
+    .container{
+        grid-template: "a a b c" minmax(150px, auto)
+                       "a a d e" minmax(150px, auto)
+                       "f g h i" minmax(auto, 150px)
+                       "j . . ." minmax(auto, 150px);
+                    
+    }
+}
+
+div {
+
+    background-image: radial-gradient(#ffffff, #e5e5e2);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 5px 5px 10px  rgba(84,84,64,0.25);
+}
+
+.a {
+    grid-area: a;
+   
+}
+
+.ico {
+    color:#ff0000;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
